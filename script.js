@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+// $( document ).ready(function() {
 
     $.getJSON("labyrinthes.json", function(data) {
 
@@ -27,4 +27,4 @@ $( document ).ready(function() {
         })
         document.getElementsByClassName("labyrinthe")[0].style.gridTemplateColumns= `repeat(${size}, 50px)`;
     });
-});
+// });
