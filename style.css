@@ -1,36 +1,20 @@
 .labyrinthe {
     display: grid;
-    padding: 10px;
+    padding: 50px;
 
 }
-.path{
-    background-color: rgba(255, 255, 255, 0.8);
+.case{
+    height: 50px;
+    background-color: antiquewhite;
+}
 
+.visitedcolor {
+    background-color: gray;
     padding: 20px;
-
     text-align: center;
 }
-
-.wall-top{
-    border-top:solid 2px;
+.winnercolor{
+    background-color: greenyellow;
+    padding: 20px;
+    text-align: center;
 }
-.wall-right{
-    border-right: solid 2px;
-}
-.wall-bottom{
-    border-bottom:solid 2px;
-}
-.wall-left{
-    border-left: solid 2px;
-}
-
-/*.visitedcolor {*/
-/*    background-color: gray;*/
-/*    padding: 20px;*/
-/*    text-align: center;*/
-/*}*/
-/*.winnercolor{*/
-/*    background-color: greenyellow;*/
-/*    padding: 20px;*/
-/*    text-align: center;*/
-/*}*/
