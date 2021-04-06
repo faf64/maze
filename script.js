@@ -1,8 +1,9 @@
 $.getJSON("labyrinthes.json", display)
 let maze1;
+let ch = []
 // const tab2D = [];
 function display(data) {
-    let size = 25;
+    let size = 4;
     maze1 = data[size]['ex-2'];
     // console.log(maze1)
     maze = mazeConstruction(maze1, size);
@@ -13,8 +14,9 @@ function display(data) {
     //     tab2D[elem.posX].push(elem)
     // }
     // console.log(tab2D[10][5]);
-    console.log("oui")
     DFSite(maze, maze[0], size)
+    console.log("Solution:")
+    console.log(ch)
 }
 
 
@@ -58,7 +60,7 @@ let DFSite = (maze1, currentcase, size) => {
     let stack = [];
     stack.push(currentcase);
 
-    let ch = []
+
 
     while (stack.length > 0) {
         currentcase = stack.pop();
@@ -77,13 +79,12 @@ let DFSite = (maze1, currentcase, size) => {
                 stack.push(neighbor);
             });
             document.getElementById(`case-${currentcase.case}`).classList.add("visited");
+            console.log(currentcase)
             ch.push(currentcase)
 
 
         }
 
     }
-
-    console.log(ch)
 
 }
